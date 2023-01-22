@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar design start here */
+.navbar {
+  background-color: black;
+  position: relative;
+}
+
+.nav-menu {
+  padding: 10px;
+  width: 100%;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  width: 70px;
+  margin-right: 5px;
+}
+
+.nav-menu i {
+  float: right;
+  cursor: pointer;
+  padding: 5px;
+  margin-top: -2px;
+}
+
+.navbar::after {
+  clear: both;
+  display: table;
+  content: "";
+}
+
+/* navber design end heref */
+
+/* poster design start here */
+.poster img {
+  width: 100%;
+  height: 500px;
+}
+
+.poster::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* poster design end here */
+
+/* band design start here */
+.band-contain {
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.header h1 {
+  font-size: 3rem;
+  letter-spacing: 5px;
+}
+
+.header p {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+.band-desc p {
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.band-images {
+  display: flex;
+}
+
+.title-img {
+  margin: 40px;
+}
+
+.band-images img {
+  width: 200px;
+  height: 200px;
+}
+
+.band-contain::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+/* bamd design end here */
+
+/* contact design start here */
+.contact {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.contact::after {
+  display: table;
+  content: "";
+  clear: both;
+}
+/* contact design end here */
+
+.footer {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  float: left;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 10px;
+}
+
+@media (max-width: 566px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 29px;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-menu.active {
+    position: absolute;
+    left: 0;
+  }
+}
